@@ -1,17 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <el-row id="app">
+    <HelloWorld :msg="msg"/>
+    <button v-on:click="call">click</button>
+  </el-row>
+  
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+// const {call,add1} =require ('./function')
 
 export default {
   name: 'App',
+  data(){
+    return{
+     msg:'  YOUTUBE DOWNLOADER',
+    }
+  },
+  methods:{
+    call(){
+      console.log('yes')
+    }
+  // call(){call()},
+  // add(){
+  //   console.log(typeof(this.a))
+  //   this.addNumber=add1(Number(this.a),Number(this.b))
+  // }
+
+  },
   components: {
-    HelloWorld
+HelloWorld
   }
 }
 </script>
@@ -24,5 +42,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.youtube{
+  height:150px;
+  width: 300px;
+  margin-right: 800px;
 }
 </style>
