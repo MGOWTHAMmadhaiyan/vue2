@@ -18,7 +18,8 @@ export default {
     }
   },
   methods:{
-    call(){
+    call() {
+      ffff
       console.log('yes')
     }
   // call(){call()},
